@@ -269,45 +269,17 @@ body {
     color: #FFFFFF;
 }
 
-/* 詳細ページの画像グリッドシステム 
-   （ここが画像の枚数制御に必要です）
-*/
+/* 詳細ページの画像表示（シンプル縦並び・スクロール） */
 .detail-image-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* 画像間のスペース */
+    margin-bottom: 4rem;
 }
 .detail-image-grid img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-/* グリッドカラム制御 */
-.grid-cols-2 {
-    grid-template-columns: 1fr;
-}
-.grid-cols-3 {
-    grid-template-columns: 1fr;
-}
-.grid-cols-4 {
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-    .grid-cols-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .grid-cols-3 {
-        grid-template-columns: 1fr 1fr;
-    }
-    /* 3枚の時、1枚目を大きく表示 */
-    .grid-cols-3 img:first-child {
-        grid-column: span 2;
-    }
-    .grid-cols-4 {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 /* Work一覧ページ グリッド */
@@ -329,7 +301,6 @@ body {
 }
 .work-image-container {
     overflow: hidden;
-    /* サムネイルのアスペクト比 */
     aspect-ratio: 1 / 1; 
     background-color: #1a1a1a;
     margin-bottom: 1rem;
