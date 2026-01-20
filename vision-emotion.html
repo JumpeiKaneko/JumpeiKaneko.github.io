@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エモーション - Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="vision.html" class="nav-link active">VISION</a>
+                <a href="work.html" class="nav-link">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section">
+            <h1 class="page-title-detail">Vision / エモーション</h1>
+
+            <div class="mb-12">
+                <img src="images/vision-emotion.jpg" alt="エモーション" class="w-full h-auto border border-gray-800">
+            </div>
+
+            <div class="detail-content mx-auto">
+                <p>メディア論とサウンド・アートを基盤に、現象（消えるもの）、物質（朽ちるもの）、情報（残るもの）という三つのメディアを横断し、エモーションの構造を探求する。</p>
+                <p>中心的な課題は、デジタルデータとして「残るもの」となった音に、「消えるもの」としての不可逆性と、「朽ちるもの」としての物質性をいかに再び与えるかである。</p>
+                <ul class="list-disc list-inside space-y-2 mt-4 text-gray-400 text-sm">
+                    <li><strong>消えるもの（現象）：</strong>二度と同じ形では戻らないその不可逆性は、はかないノスタルジーを喚起する。</li>
+                    <li><strong>朽ちるもの（物質）：</strong>時間と共に変化し、やがては朽ちていくという、避けられない運命の中にノスタルジーを宿す。</li>
+                    <li><strong>残るもの（情報）：</strong>デジタル化された音源は劣化しないが、そこにはある種の空虚さが漂う。</li>
+                </ul>
+            </div>
+            <div class="text-center mt-16"><a href="vision.html" class="back-link">← Back to Vision</a></div>
+        </section>
+    </main>
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
