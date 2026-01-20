@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision - Jumpei Kaneko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="vision.html" class="nav-link active">VISION</a>
+                <a href="work.html" class="nav-link">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section">
+            <h1 class="page-title">VISION</h1>
+            
+            <div class="vision-list">
+                <a href="vision-reconstruction.html" class="vision-item">
+                    <h2 class="vision-title">日常の再構築</h2>
+                </a>
+                <a href="vision-emotion.html" class="vision-item">
+                    <h2 class="vision-title">エモーション (Emotion)</h2>
+                </a>
+                <a href="vision-asymmetry.html" class="vision-item">
+                    <h2 class="vision-title">視線の非対称性</h2>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> JUMPEI KANEKO</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
