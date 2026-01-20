@@ -7,6 +7,7 @@ body {
     font-family: 'Noto Serif JP', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8;
 }
 
 /* ヘッダーや英語表記部分のフォント */
@@ -98,6 +99,8 @@ body {
 .main-content {
     padding: 8rem 1.5rem 4rem;
     min-height: 80vh;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 @media (min-width: 768px) {
     .main-content {
@@ -105,9 +108,6 @@ body {
     }
 }
 .fade-in-section {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -269,51 +269,45 @@ body {
     color: #FFFFFF;
 }
 
-/* 詳細ページの画像グリッドシステム */
+/* 詳細ページの画像グリッドシステム 
+   （ここが画像の枚数制御に必要です）
+*/
 .detail-image-grid {
     display: grid;
     gap: 1.5rem;
     margin-bottom: 3rem;
 }
-/* 1枚 */
-.detail-image-grid.cols-1 {
-    grid-template-columns: 1fr;
-}
-/* 2枚 */
-.detail-image-grid.cols-2 {
-    grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-    .detail-image-grid.cols-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-/* 3枚 (上1枚、下2枚) */
-.detail-image-grid.cols-3 {
-    grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-    .detail-image-grid.cols-3 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .detail-image-grid.cols-3 img:first-child {
-        grid-column: span 2;
-    }
-}
-/* 4枚 (2x2) */
-.detail-image-grid.cols-4 {
-    grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-    .detail-image-grid.cols-4 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .detail-image-grid img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* グリッドカラム制御 */
+.grid-cols-2 {
+    grid-template-columns: 1fr;
+}
+.grid-cols-3 {
+    grid-template-columns: 1fr;
+}
+.grid-cols-4 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-cols-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+    /* 3枚の時、1枚目を大きく表示 */
+    .grid-cols-3 img:first-child {
+        grid-column: span 2;
+    }
+    .grid-cols-4 {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Work一覧ページ グリッド */
@@ -335,7 +329,8 @@ body {
 }
 .work-image-container {
     overflow: hidden;
-    aspect-ratio: 4 / 3;
+    /* サムネイルのアスペクト比 */
+    aspect-ratio: 1 / 1; 
     background-color: #1a1a1a;
     margin-bottom: 1rem;
 }
