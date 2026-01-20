@@ -276,10 +276,13 @@ body {
     gap: 2.5rem; /* 画像間のスペース */
     margin-bottom: 4rem;
 }
+/* ここで画像のサイズを調整しています */
 .detail-image-grid img {
     width: 100%;
+    max-width: 480px; /* 画像の最大幅を制限して程よい大きさに */
     height: auto;
     display: block;
+    margin: 0 auto; /* 中央寄せ */
 }
 
 /* Work一覧ページ グリッド */
