@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視線の非対称性 - Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="vision.html" class="nav-link active">VISION</a>
+                <a href="work.html" class="nav-link">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section">
+            <h1 class="page-title-detail">Vision / 視線の非対称性</h1>
+
+            <div class="mb-12">
+                <img src="images/vision-asymmetry.jpg" alt="視線の非対称性" class="w-full h-auto border border-gray-800">
+            </div>
+
+            <div class="detail-content mx-auto space-y-8">
+                <div class="space-y-4">
+                    <p class="text-lg font-medium border-l-2 border-gray-500 pl-4 py-1 italic">
+                        私たちは、なぜ“すれ違う” のだろうか。
+                    </p>
+                    <p>
+                        同じ事象を見つめる時、その複雑性に包まれた「事」を各人が異なる方向や強さでフォーカスする。この“単純化” のプロセスは、しばしば表裏一体で善悪がつけられない「事」から、特定の側面を切り取り二項対立を生成する。
+                    </p>
+                    <p>
+                        フォーカスによって物語化された「それ」は、時に他者を傷つける。誰も「事」の全体を見通すことができない以上、私が理解する「それ」とは、世界そのものではなく、常に「私の中にあるそれ」である。
+                    </p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-sm border border-white/10 text-sm">
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16"><a href="vision.html" class="back-link">← Back to Vision</a></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> JUMPEI KANEKO</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
