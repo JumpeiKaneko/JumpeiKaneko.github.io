@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常の再構築 - Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="vision.html" class="nav-link active">VISION</a>
+                <a href="work.html" class="nav-link">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section">
+            <h1 class="page-title-detail">Vision / 日常の再構築</h1>
+            
+            <div class="mb-12">
+                <img src="images/vision-reconstruction.jpg" alt="日常の再構築" class="w-full h-auto border border-gray-800">
+            </div>
+
+            <div class="detail-content mx-auto">
+                <p>現代社会の効率化の中で失われつつある、偶然性や不確実性といった非言語的な豊かさ、すなわち「ときめき」をアートを通じて再発見する試み。</p>
+                <p>鑑賞者が作品と関わることで、日常を再構築する主体へと変えることを目指している。このプロセスを通じて、アートと日常の境界を脱構築する。</p>
+                
+                <h2 class="detail-subtitle">コミュニケーションの連鎖</h2>
+                <ul class="list-decimal list-inside space-y-2 mt-4 text-gray-400 text-sm">
+                    <li><strong>作家と世界のコミュニケーション：</strong>作家が自身の視線を通じて日常の断片を感受し、表現する。</li>
+                    <li><strong>作品を媒介にした作家と鑑賞者のコミュニケーション：</strong>鑑賞者は作品を通して作家の視点に触れ、新たな気づきを得る。</li>
+                    <li><strong>鑑賞者と世界のコミュニケーション：</strong>作品から得た視点を持って日常を見つめ直すことで、鑑賞者の日常は再構築される。</li>
+                </ul>
+            </div>
+            
+            <div class="text-center mt-16"><a href="vision.html" class="back-link">← Back to Vision</a></div>
+        </section>
+    </main>
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
