@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揺らぎ - Jumpei Kaneko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section work-detail-wrapper">
+            
+            <div class="work-detail-header">
+                <h1 class="work-detail-title">揺らぎ</h1>
+                <div class="work-detail-meta">
+                    <p>2024 / Sound Art</p>
+                </div>
+            </div>
+
+            <img src="images/yuragi-main.jpg" alt="揺らぎ" class="work-detail-image-main">
+
+            <div class="work-detail-text">
+                <p>熱海の梅園で見つけた「足湯のお湯に映る梅の木の揺れ」を音像化した作品である。Pythonを用いて映像内の動きをリアルタイムで計測し、その数値によってお湯の音に揺らぎを与えている。</p>
+                <p>視覚的な「揺れ」を、そのまま耳で感じる身体的体験へと変換することを試みた。</p>
+                <p>足湯の波紋という日常の断片をメディアで聴覚化し、既定の意味を解体した生の現象を提示する。揺らぎに音を重ねてプリミティブなエモーションを喚起し、技術による脱意味化から「日常の再構築」という自身の原点を表現した。</p>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/QA0yJeu6Jxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="work-detail-images-sub">
+                <img src="images/yuragi-sub1.jpg" alt="制作風景1">
+                <img src="images/yuragi-sub2.jpg" alt="制作風景2">
+            </div>
+
+            <div class="text-center">
+                <a href="work.html" class="back-link">← Back to Work</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
