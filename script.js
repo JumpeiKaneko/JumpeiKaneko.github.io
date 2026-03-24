@@ -1,6 +1,6 @@
+/* script.js */
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- ヘッダーの背景効果 ---
+    // ヘッダー背景
     const header = document.getElementById('header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- スクロールフェードイン ---
+    // フェードイン
     const faders = document.querySelectorAll('.fade-in-section');
     if (faders.length > 0) {
         const appearOptions = {
@@ -33,12 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- モバイルメニュー ---
+    // モバイルメニュー
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (menuBtn && mobileMenu) {
-        // メニューの中身を動的に生成
         const mainNav = document.querySelector('.main-nav');
         if (mainNav) {
             mobileMenu.innerHTML = mainNav.innerHTML;
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- フッターの年 ---
+    // フッター年
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
