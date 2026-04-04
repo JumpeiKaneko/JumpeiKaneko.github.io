@@ -13,7 +13,8 @@
         .slider-wrap { position: relative; width: 100%; overflow: hidden; }
         .slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
         .slider-track::-webkit-scrollbar { display: none; }
-        .slider-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
+        /* ★ ここを修正：高さを自動計算させず、アスペクト比で固定する */
+        .slider-img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
         .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
         .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #4b5563; cursor: pointer; transition: background-color 0.3s; }
         .dot.active { background-color: #e5e7eb; }
