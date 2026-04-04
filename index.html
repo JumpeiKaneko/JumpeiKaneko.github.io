@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* スライダー全体の枠 */
         .slider-wrap {
             position: relative;
             width: 100vw;
@@ -19,78 +18,74 @@
             margin-top: 40px;
             margin-bottom: 60px;
         }
-        
-        /* スワイプ（スクロール）可能にする設定 */
         .slider-track {
             display: flex;
-            overflow-x: auto; /* 横スクロールを許可 */
-            scroll-snap-type: x mandatory; /* ピタッと止まるようにする */
-            scroll-behavior: smooth; /* クリック時の移動を滑らかに */
-            -ms-overflow-style: none; /* IE, Edgeでスクロールバーを隠す */
-            scrollbar-width: none; /* Firefoxでスクロールバーを隠す */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-        /* Chrome, Safariでスクロールバーを隠す */
         .slider-track::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
-
         .slider-img {
             width: 100vw; 
             height: 60vh; 
             object-fit: cover;
             flex-shrink: 0;
-            scroll-snap-align: start; /* スクロール時にピタッと合う位置 */
+            scroll-snap-align: start;
         }
         
-        /* 点（ドット）のデザイン */
+        /* 点を6pxに固定 */
         .slider-dots {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 8px;
+            margin-top: 16px;
         }
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            background-color: #d1d5db; /* Tailwindのgray-300あたりの色 */
+            background-color: #d1d5db;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         .dot.active {
-            background-color: #374151; /* アクティブな時は濃いグレー（Tailwindのgray-700） */
+            background-color: #374151;
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
+    <header id="header" class="site-header">
         <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
             <a href="index.html" class="site-title">JUMPEI KANEKO</a>
-            <nav class="main-nav flex gap-6">
+            <nav class="main-nav">
                 <a href="index.html" class="nav-link active">ABOUT</a>
                 <a href="vision.html" class="nav-link">VISION</a>
                 <a href="work.html" class="nav-link">WORK</a>
                 <a href="news.html" class="nav-link">NEWS</a>
                 <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
-            <button id="menu-btn" class="mobile-menu-button md:hidden">MENU</button>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
         </div>
     </header>
     <div id="mobile-menu" class="mobile-menu-panel"></div>
 
     <main class="main-content">
-        <section id="about" class="fade-in container mx-auto px-6 md:px-8">
-            <div class="profile-header mt-10">
-                <h1 class="profile-name text-3xl font-bold">金子 淳平</h1>
-                <p class="profile-title-sub text-gray-500 mt-2">サウンド・アート / メディアアート</p>
+        <section id="about" class="fade-in">
+            <div class="profile-header">
+                <h1 class="profile-name">金子 淳平</h1>
+                <p class="profile-title-sub">サウンド・アート / メディアアート</p>
             </div>
             
             <div class="slider-wrap">
                 <div class="slider-track">
-                    <img src="images/listening-device.jpg" alt="耳を澄ます為の装置" class="slider-img">
-                    <img src="images/afterschool-museum.jpg" alt="大学生のための放課後ミュージアム" class="slider-img">
                     <img src="images/resonance.jpg" alt="Resonance" class="slider-img">
+                    <img src="images/listening-device.jpg" alt="耳を澄ます為の装置" class="slider-img">
                     <img src="images/sayounara-soshite.jpg" alt="さようなら、そして" class="slider-img">
+                    <img src="images/afterschool-museum.jpg" alt="大学生のための放課後ミュージアム" class="slider-img">
                 </div>
                 <div class="slider-dots">
                     <span class="dot active" data-index="0"></span>
@@ -100,9 +95,9 @@
                 </div>
             </div>
 
-            <div class="profile-text max-w-3xl mb-16 leading-relaxed">
-                <p class="mb-6">
-                    <br>
+            <div class="profile-text">
+                <p>
+                    <strong>主な専門領域：仏近現代美術史研究・アートコミュニケーション</strong><br>
                     サウンド・アート、仏近現代美術史研究、アートコミュニケーションの3つの専門領域を横断し、理論と表現を双方向に行き来する活動の形を探求している。
                 </p>
                 <p>
@@ -110,59 +105,59 @@
                 </p>
             </div>
 
-            <div class="bio-grid grid md:grid-cols-2 gap-12 max-w-5xl">
+            <div class="bio-grid">
                 <div>
-                    <h2 class="section-title text-xl font-bold border-b pb-2 mb-6">活動略歴</h2>
-                    <div class="timeline space-y-6">
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2022</div>
-                            <div class="timeline-desc text-sm">国立新美術館ユースプログラム「第1期新美塾」修了。</div>
+                    <h2 class="section-title">活動略歴</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-desc">国立新美術館ユースプログラム「第1期新美塾」修了。</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2024-現在</div>
-                            <div class="timeline-desc text-sm">明治学院大学 文学部 フランス文学科 在籍。<br>印象派を中心に仏近現代美術・思想を研究。</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024-現在</div>
+                            <div class="timeline-desc">明治学院大学 文学部 フランス文学科 在籍。<br>印象派を中心に仏近現代美術・思想を研究。</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2024-現在</div>
-                            <div class="timeline-desc text-sm">東京都美術館×東京藝術大学「とびらプロジェクト」に参加。<br>アートコミュニケータとして活動。</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024-現在</div>
+                            <div class="timeline-desc">東京都美術館×東京藝術大学「とびらプロジェクト」に参加。<br>アートコミュニケータとして活動。</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2026</div>
-                            <div class="timeline-desc text-sm">美学校 サウンド・アート講座 修了。</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-desc">美学校 サウンド・アート講座 修了。</div>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="section-title text-xl font-bold border-b pb-2 mb-6">展示・登壇・受賞歴</h2>
-                    <div class="timeline space-y-6">
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2025</div>
-                            <div class="timeline-desc text-sm">鯖江市制70周年記念 まちなか芸術祭 2025（出展）</div>
+                    <h2 class="section-title">展示・登壇・受賞歴</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-desc">鯖江市制70周年記念 まちなか芸術祭 2025（出展）</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2025</div>
-                            <div class="timeline-desc text-sm">tornado2025 企業賞受賞</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-desc">tornado2025 企業賞受賞</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2025</div>
-                            <div class="timeline-desc text-sm">Sasebo Sound Chronicle Award ファイナリスト選出</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-desc">Sasebo Sound Chronicle Award ファイナリスト選出</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2025</div>
-                            <div class="timeline-desc text-sm">させぼピース展 ―海からたどる、時の旅（出展）</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-desc">させぼピース展 ―海からたどる、時の旅（出展）</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2026.01</div>
-                            <div class="timeline-desc text-sm">とびらプロジェクトフォーラム 登壇（東京都美術館）</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026.01</div>
+                            <div class="timeline-desc">とびらプロジェクトフォーラム 登壇（東京都美術館）</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2026.02</div>
-                            <div class="timeline-desc text-sm">浪江学生デジタルアート道場 2025 ゲスト・クリエイター</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026.02</div>
+                            <div class="timeline-desc">浪江学生デジタルアート道場 2025 ゲスト・クリエイター</div>
                         </div>
-                        <div class="timeline-item flex">
-                            <div class="timeline-year font-bold w-24 flex-shrink-0">2026</div>
-                            <div class="timeline-desc text-sm">希望の野帖成果展 Art Center New（出展）</div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-desc">希望の野帖成果展 Art Center New（出展）</div>
                         </div>
                     </div>
                 </div>
@@ -170,18 +165,16 @@
         </section>
     </main>
 
-    <footer class="site-footer text-center py-8 mt-12 text-gray-500 text-sm">
+    <footer class="site-footer">
         <p>&copy; 2026 JUMPEI KANEKO</p>
     </footer>
     
     <script src="script.js" defer></script>
-    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const track = document.querySelector('.slider-track');
             const dots = document.querySelectorAll('.dot');
 
-            // 横スクロールした時に、見えている画像に合わせて点の色を変える
             track.addEventListener('scroll', () => {
                 const scrollLeft = track.scrollLeft;
                 const windowWidth = window.innerWidth;
@@ -192,7 +185,6 @@
                 });
             });
 
-            // 点をクリックした時に、その画像までスッーっとスクロールする
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     track.scrollTo({
