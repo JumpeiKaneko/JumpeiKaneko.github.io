@@ -3,52 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日常の再構築 - Vision</title>
+    <title>Resonance - Jumpei Kaneko</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header" class="site-header">
-        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+        <div class="header-inner">
             <a href="index.html" class="site-title">JUMPEI KANEKO</a>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link">ABOUT</a>
-                <a href="vision.html" class="nav-link active">VISION</a>
-                <a href="work.html" class="nav-link">WORK</a>
-                <a href="news.html" class="nav-link">NEWS</a>
-                <a href="contact.html" class="nav-link">CONTACT</a>
-            </nav>
             <button id="menu-btn" class="mobile-menu-button">MENU</button>
         </div>
     </header>
     <div id="mobile-menu" class="mobile-menu-panel"></div>
 
     <main class="main-content">
-        <section class="fade-in-section">
-            <h1 class="page-title-detail">Vision / 日常の再構築</h1>
+        <section class="fade-in-section work-detail-wrapper">
             
-            <div class="mb-12">
-                <img src="images/vision-reconstruction.jpg" alt="日常の再構築" class="w-full h-auto border border-gray-800">
+            <div class="work-detail-header">
+                <h1 class="work-detail-title">Resonance</h1>
+                <div class="work-detail-meta">
+                    <p>2025 / 形式：サウンド・インスタレーション ｜ WebAR体験型作品</p>
+                    <p>鯖江市制70周年記念 まちなか芸術祭2025｜出展<br>させぼピース展 ―海からたどる、時の旅｜出展</p>
+                    <p>Sasebo Sound Chronicle Award｜ファイナリスト選出・受賞</p>
+                    <p class="mt-2">
+                        <a href="https://x.gd/IlZ4M" target="_blank" class="underline hover:text-gray-300 mr-4">作品本編音源</a>
+                        <a href="https://x.gd/EqUk8" target="_blank" class="underline hover:text-gray-300">体験用WEBアプリ</a>
+                    </p>
+                </div>
             </div>
 
-            <div class="detail-content mx-auto">
-                <p>現代社会の効率化の中で失われつつある、偶然性や不確実性といった非言語的な豊かさ、すなわち「ときめき」をアートを通じて再発見する試み。</p>
-                <p>鑑賞者が作品と関わることで、日常を再構築する主体へと変えることを目指している。このプロセスを通じて、アートと日常の境界を脱構築する。</p>
-                
-                <h2 class="detail-subtitle">コミュニケーションの連鎖</h2>
-                <ul class="list-decimal list-inside space-y-2 mt-4 text-gray-400 text-sm">
-                    <li><strong>作家と世界のコミュニケーション：</strong>作家が自身の視線を通じて日常の断片を感受し、表現する。</li>
-                    <li><strong>作品を媒介にした作家と鑑賞者のコミュニケーション：</strong>鑑賞者は作品を通して作家の視点に触れ、新たな気づきを得る。</li>
-                    <li><strong>鑑賞者と世界のコミュニケーション：</strong>作品から得た視点を持って日常を見つめ直すことで、鑑賞者の日常は再構築される。</li>
-                </ul>
+            <img src="images/resonance-main.jpg" alt="Resonance" class="work-detail-image-main">
+
+            <div class="work-detail-text space-y-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
+                    <p>本作は、「そこ」に存在する様々な「境界線の響き合い」を解釈・表現する、サイトスペシフィックなサウンド・インスタレーションである。AR技術、WEBアプリによる参加型システム、物理パネル、フィールドレコーディング楽曲という複数のメディアを往来し、ある土地や音をめぐる「関係性」を可聴化する手法を提案した。それは、鑑賞者の「日常」を再構築する、コミュニケーションのインターフェースとして機能する。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ Sasebo Sound Chronicle Award｜ファイナリスト選出・受賞 審査員評</h3>
+                    <ul class="space-y-3 pl-4">
+                        <li><strong>Kuniyuki氏：</strong><br>「極めてコンセプチュアル。音の断片の組み立てにストーリー性があり、強いインパクトがある。」</li>
+                        <li><strong>蓮沼執太氏：</strong><br>「環境音だけで編まれた音楽。その高い構成力に驚いた。歴史に対する視点と響きの広がりがシンクロしており、鐘のモティーフの扱いも見事。」</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 技術スタック（Technical Stack）</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>DAW：Logic Pro（環境音の解体・楽曲制作・立体音響編集）</li>
+                        <li>Design：Adobe Photoshop / Illustrator（展示パネル・UIデザイン・ビジュアル構築）</li>
+                        <li>System：WebAR、独自バックエンド（音声自動削除システム）</li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="text-center mt-16"><a href="vision.html" class="back-link">← Back to Vision</a></div>
+
+            <div class="video-container mt-12">
+                <iframe src="https://www.youtube.com/embed/elibt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="work-detail-images-sub mt-12">
+                <img src="images/resonance-sub1.jpg" alt="展示風景1">
+                <img src="images/resonance-sub2.jpg" alt="展示風景2">
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="work.html" class="back-link">← Back to Work</a>
+            </div>
         </section>
     </main>
+
     <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
     <script src="script.js" defer></script>
 </body>
