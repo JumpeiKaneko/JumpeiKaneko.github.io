@@ -13,10 +13,10 @@
     <style>
         .slider-wrap {
             position: relative;
-            width: 100vw;
-            margin-left: calc(50% - 50vw);
+            width: 100%; 
             margin-top: 40px;
             margin-bottom: 60px;
+            overflow: hidden;
         }
         .slider-track {
             display: flex;
@@ -30,8 +30,7 @@
             display: none;
         }
         .slider-img {
-            width: 100vw; 
-            /* 1200:800 (3:2) の比率を維持 */
+            width: 100%; 
             aspect-ratio: 3 / 2;
             object-fit: cover;
             flex-shrink: 0;
@@ -82,8 +81,8 @@
             
             <div class="slider-wrap">
                 <div class="slider-track">
-                    <img src="images/resonance.jpg" alt="Resonance" class="slider-img">
                     <img src="images/listening-device.jpg" alt="耳を澄ます為の装置" class="slider-img">
+                    <img src="images/resonance.jpg" alt="Resonance" class="slider-img">
                     <img src="images/sayounara-soshite.jpg" alt="さようなら、そして" class="slider-img">
                     <img src="images/afterschool-museum.jpg" alt="大学生のための放課後ミュージアム" class="slider-img">
                 </div>
@@ -148,11 +147,11 @@
                             <div class="timeline-desc">させぼピース展 ―海からたどる、時の旅（出展）</div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-year">2026</div>
+                            <div class="timeline-year">2026.01</div>
                             <div class="timeline-desc">とびらプロジェクトフォーラム 登壇（東京都美術館）</div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-year">2026</div>
+                            <div class="timeline-year">2026.02</div>
                             <div class="timeline-desc">浪江学生デジタルアート道場 2025 ゲスト・クリエイター</div>
                         </div>
                         <div class="timeline-item">
