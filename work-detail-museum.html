@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生の放課後ミュージアム - Jumpei Kaneko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="work.html" class="nav-link active">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section work-detail-wrapper">
+            
+            <div class="work-detail-header">
+                <h1 class="work-detail-title">大学生の放課後ミュージアム</h1>
+                <div class="work-detail-meta">
+                    <p>2025 / Workshop</p>
+                    <p>東京都美術館にて自主企画で対外向けに開催</p>
+                </div>
+            </div>
+
+            <img src="images/museum-main.jpg" alt="放課後ミュージアム" class="work-detail-image-main">
+
+            <div class="work-detail-text space-y-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 企画概要</h3>
+                    <p>東京都美術館「とびらプロジェクト」のアートコミュニケータとして自ら企画を発案し、約20名のプロジェクトチームを組成。大学生・専門学生・大学院生を対象とした鑑賞プログラムをゼロから立ち上げた。</p>
+                    <p class="mt-4">「美術館に興味はあるが、楽しみ方が分からない層」をターゲットに、知識ではなく「感性（体験）」に重きを置いたプログラムを設計。iPadを用いたコラージュ制作や対話型鑑賞を組み合わせ、参加者が能動的に作品に関わる仕組みを構築した。</p>
+                    <p class="mt-4">企画書作成から広報、当日の運営指揮までを一貫して担当し、参加者の心理的ハードルを下げてアートへの新しい関わり方を提示することに成功した。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ プログラムフロー：体験の設計</h3>
+                    <ul class="space-y-3 pl-4">
+                        <li><strong>① みる：</strong><br>アートコミュニケータ（とびラー）と共に展示室を巡る。「自分の部屋に飾りたい作品」という独自の視点で3～5つの作品を見つけ、写真に収める。</li>
+                        <li><strong>② つくる：</strong><br>ワークスペースに戻り、採集した作品写真をiPad上でコラージュ。自分だけの「理想の壁」をコーディネートする。</li>
+                        <li><strong>③ はなす：</strong><br>完成した「理想の壁」を囲み、作品を選んだ理由やコンセプトをグループでシェアする。</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ フォーラム登壇</h3>
+                    <p>14年続く本事業の成功事例として、企画『放課後ミュージアム』が選出。2026年1月25日、東京都美術館 講堂にて開催された公式フォーラムに登壇した。</p>
+                    <p class="mt-4">鑑賞が生むコミュニティの創造性について、220名の観客を前にディスカッションを実施。既存の枠組みに捉われない「大学生向けプログラム」の開拓と、参加者の「好き」を言語化させた実践が、アートコミュニケーションの新たなモデルとして高く評価された。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 記録・アーカイブ</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>公式WEBサイト：<a href="https://tobira-project.info/f2026/" target="_blank" class="underline hover:text-gray-300">https://tobira-project.info/f2026/</a></li>
+                        <li>フォーラム記録動画：<a href="https://youtu.be/qrjDPr2DpTM" target="_blank" class="underline hover:text-gray-300">https://youtu.be/qrjDPr2DpTM</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="video-container mt-12">
+                <iframe src="https://www.youtube.com/embed/qrjDPr2DpTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="work.html" class="back-link">← Back to Work</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
