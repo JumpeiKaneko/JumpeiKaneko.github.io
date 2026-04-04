@@ -13,7 +13,7 @@
         .slider-wrap { position: relative; width: 100%; overflow: hidden; }
         .slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
         .slider-track::-webkit-scrollbar { display: none; }
-        /* ★ ここを修正：高さを自動計算させず、アスペクト比で固定する */
+        /* スライド画像が真っ黒にならないようアスペクト比で固定 */
         .slider-img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
         .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
         .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #4b5563; cursor: pointer; transition: background-color 0.3s; }
@@ -55,12 +55,19 @@
             <img src="images/resonance-main.jpg" alt="Resonance" class="work-detail-image-main">
 
             <div class="work-detail-text space-y-12">
-                <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
                     <p>本作は、「そこ」に存在する様々な「境界線の響き合い」を解釈・表現する、サイトスペシフィックなサウンド・インスタレーションである。AR技術、WEBアプリによる参加型システム、物理パネル、フィールドレコーディング楽曲という複数のメディアを往来し、ある土地や音をめぐる「関係性」を可聴化する手法を提案した。</p>
-                    
-                    <p>効率化の中で失われた偶然性や不確実性といった非言語的な豊かさ、すなわち「ときめき」をアートを通じて再発見し、現実世界の断片を作品へと持ち込んでいる。作家の視点に触れた鑑賞者が自らの日常を見つめ直し、他者との対話や共感を生む「コミュニケーションの連鎖」を創出することで、アートと日常の境界を脱構築し、鑑賞者を「日常の再構築」を担う主体へと変容させる。</p>
-                    
-                    <p>さらに、デジタルデータとして永続する「残るもの（情報）」に対し、あえて「消えるもの（現象）」としての不可逆性と、「朽ちるもの（物質）」としての手触りを回復させることを試みた。デジタルサウンドスケープに一度聴くと消滅する設計を施し、音（現象）が本来持っていた「二度と戻らない一回性」を回復させることで、現代におけるノスタルジーの新たな在り方を問うている。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 日常の再構築</h3>
+                    <p>効率化の中で失われた偶然性や不確実性といった非言語的な豊かさ、すなわち「ときめき」をアートを通じて再発見する試みである。現実世界の断片を作品へと持ち込む。作家の視点に触れた鑑賞者が自らの日常を見つめ直し、他者との対話や共感を生む「コミュニケーションの連鎖」を創出することで、アートと日常の境界を脱構築し、鑑賞者を日常の再構築を担う主体へと変容させる。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ メディアとエモーション</h3>
+                    <p>デジタルデータとして永続する「残るもの（情報）」に対し、あえて「消えるもの（現象）」としての不可逆性と、 「朽ちるもの（物質）」としての手触りを回復させる。デジタルサウンドスケープに一度聴くと消滅する設計を施し、音（現象）が本来持っていた「二度と戻らない一回性」を回復させることで、現代におけるノスタルジーの新たな在り方を問う。</p>
                 </div>
 
                 <div>
