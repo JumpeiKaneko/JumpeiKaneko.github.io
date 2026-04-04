@@ -13,7 +13,8 @@
         .slider-wrap { position: relative; width: 100%; overflow: hidden; }
         .slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
         .slider-track::-webkit-scrollbar { display: none; }
-        .slider-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
+        /* スライド画像が真っ黒にならないようアスペクト比で固定 */
+        .slider-img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
         .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
         .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #4b5563; cursor: pointer; transition: background-color 0.3s; }
         .dot.active { background-color: #e5e7eb; }
@@ -48,10 +49,15 @@
             <img src="images/mimi-main.jpg" alt="耳を澄ます為の装置" class="work-detail-image-main">
 
             <div class="work-detail-text space-y-12">
-                <div class="space-y-6">
-                    <p>「あなたが見ている『私』は私ではない。『私』は、『あなたの中の私』なのだ」。本作は、同じ事象を見つめながらも、個々人が異なる側面を切り取り物語化する「視線の非対称性」をテーマに制作した。誰も事の全体を見通せない不確実な世界で、主観性の強い「音」を媒介に他者のまなざしを追体験させるプロセスを通じ、新たな関係性の創出を目指している。</p>
-                    
-                    <p>奥に配置されたアルミパネルの「割り切れない」物理的な凸凹をデータ化し、変換された「断片」としての音響が重なり合う。鑑賞者は全体像の見えない複雑さに直面し、自身の主観的な物語と客観的な構造の間で「折り合い」をつけることを促される。認知の非対称性による「すれ違い」を架橋し、他者との新たな対話を創出する試みである。</p>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
+                    <p>あなたが見ている「私」は私ではない。「私」は、「あなたの中の私」なのだ。本作は、同じ事象を見つめながらも、個々人が異なる側面を切り取り物語化する「視線の非対称性」をテーマに制作した。「その人の中のそれ」があふれるこの世界で、これから先、あなたと私、そして世界は、どうやって歩むのだろうか。</p>
+                    <p class="mt-4">奥に配置されたアルミパネルの「割り切れない」物理的な凸凹をデータ化し、音楽へと変換された「断片」として出力する。「モノ」としてのキャンバスと、「データ」としての音が重なり合うことで、鑑賞者は全体像の見えない複雑さに直面する。本作は、自身の主観的な物語と客観的な構造の間で「折り合い」をつけるための装置である。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 視線の非対称性</h3>
+                    <p>同じ事象を見つめていても、各人が異なる側面を切り取り「単純化」することで生じる物語の分裂と、そこから生まれる二項対立的な「すれ違い」の構造を分析する。誰も事の全体を見通せない以上、主観性の強い「音」を媒介に他者のまなざしを追体験させるプロセスを通じ、物語化された認知の非対称性を超えた新たな関係性の創出を目指す。</p>
                 </div>
 
                 <div>
