@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>耳を澄ます為の装置 - Jumpei Kaneko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="work.html" class="nav-link active">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+            <button id="menu-btn" class="mobile-menu-button">MENU</button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel"></div>
+
+    <main class="main-content">
+        <section class="fade-in-section work-detail-wrapper">
+            
+            <div class="work-detail-header">
+                <h1 class="work-detail-title">耳を澄ます為の装置</h1>
+                <div class="work-detail-meta">
+                    <p>2026 / Installation</p>
+                    <p>キーワード：視線の非対称性 / 物語化 / 複雑性 / 物質とデータ / 折り合い</p>
+                    <p>展示実績：NEW SCHOOL 成果展「希望の野帖」 at Art Center NEW</p>
+                </div>
+            </div>
+
+            <img src="images/mimi-main.jpg" alt="耳を澄ます為の装置" class="work-detail-image-main">
+
+            <div class="work-detail-text space-y-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
+                    <p>あなたが見ている「私」は私ではない。「私」は、「あなたの中の私」なのだ。本作は、同じ事象を見つめながらも、個々人が異なる側面を切り取り物語化する「視線の非対称性」をテーマに制作した。「その人の中のそれ」があふれるこの世界で、これから先、あなたと私、そして世界は、どうやって歩むのだろうか。</p>
+                    <p class="mt-4">奥に配置されたアルミパネルの「割り切れない」物理的な凸凹をデータ化し、音楽へと変換された「断片」として出力する。「モノ」としてのキャンバスと、「データ」としての音が重なり合うことで、鑑賞者は全体像の見えない複雑さに直面する。本作は、自身の主観的な物語と客観的な構造の間で「折り合い」をつけるための装置である。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 音の生成ルール</h3>
+                    <p class="mb-2">アルミパネルの形状データを読み取り、以下の仕組みで音に変換している。</p>
+                    <ul class="space-y-3 pl-4">
+                        <li><strong>① 起伏の深さ ＝ 和音の厚み</strong><br>アルミの凸凹のデータが連続して偏ると、空間を漂う和音の層が最大10層まで増減し、響きが変化する。</li>
+                        <li><strong>② しわの密度 ＝ ビートの速さ</strong><br>アルミのしわの細かさのデータが連続して偏ると、心臓の鼓動のようなビートを打つ速さが3段階に変化。</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-3">■ 技術スタック (Technical Stack)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Software：Python（アルミの深度や密度をMIDI音源に変換）</li>
+                        <li>Hardware：論考、アルミパネル、黒色キャンバス、木枠、振動スピーカー（エキサイター）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="video-container mt-12">
+                <iframe src="https://www.youtube.com/embed/koExwe1mF_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="work-detail-images-sub mt-12">
+                <img src="images/mimi-sub1.jpg" alt="展示風景1">
+                <img src="images/mimi-sub2.jpg" alt="展示風景2">
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="work.html" class="back-link">← Back to Work</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
