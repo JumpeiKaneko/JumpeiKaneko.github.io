@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* スライドショー用のCSS */
         .slider-wrap { position: relative; width: 100%; overflow: hidden; }
         .slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
         .slider-track::-webkit-scrollbar { display: none; }
-        .slider-img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; flex-shrink: 0; scroll-snap-align: start; }
+        /* object-containに変更してトリミングを防止 */
+        .slider-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; background-color: #f9f9f9; }
         .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
         .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #d1d5db; cursor: pointer; transition: background-color 0.3s; }
         .dot.active { background-color: #374151; }
@@ -47,16 +47,13 @@
 
             <img src="images/sayonara-main.jpg" alt="さようなら、そして" class="work-detail-image-main">
 
-            <div class="work-detail-text space-y-8">
-                <div>
-                    <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
-                    <p>本作は、再開発によって消失しゆく故郷・品川の踏切を舞台に、「あの時」の音世界から都市と個人の関係性を思考する試みである。記録され永続するデジタルな「情報」に対し、二度と同じ響きが生まれない不可逆な「現象」としての音響空間を提示。都市の変容と自己の変容を地続きに捉え、個人の物語による新しいアーカイブの形を提案する。</p>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-3">■ ステートメント</h3>
-                    <p>生まれ育った品川が再開発で姿を変える時、そこで生きる「自分」もまた流動の中にあることを痛感する。無機質な都市装置と、温かみを帯びた故郷。この二面性を引き受け、変化し続ける都市や自己の中に蠢くエモーションを「仮固定」することを試みた。</p>
-                    <p class="mt-4">ニコラ・ブリオーの「関係性の美学」を引用し、巨大な都市構造と個人の身体の間に生じる流動的な関係性を提示する。この場が、鑑賞者にとって日常を再構築し、形のない「わからないもの」を共有する場になることを願って制作した。</p>
+            <div class="work-detail-text space-y-12">
+                <div class="space-y-6">
+                    <p>再開発によって消失しゆく故郷・品川の踏切を舞台に、「あの時」の音世界から都市と個人の関係性を思考する試みである。生まれ育った場所が姿を変える時、そこで生きる「自分」もまた流動の中にある。効率化で失われた日常の「ときめき」を再発見し、鑑賞者が主体的に世界を編み直すプロセスを提示したいと考えた。</p>
+                    
+                    <p>デジタルデータとして永続する「情報」に対し、あえて「現象」としての不可逆性と「物質」としての手触りを回復させる。一度聴くと消滅する設計を施したサウンドスケープを通じて、音（現象）が本来持っていた二度と戻らない一回性を提示し、現代におけるノスタルジーの新たな在り方を問うている。</p>
+                    
+                    <p>無機質な都市装置と温かみを帯びた故郷。この二面性を引き受け、変化し続ける都市や自己の中に蠢くエモーションを「仮固定」する場を創出することで、アートと日常の境界を脱構築することを目指した。</p>
                 </div>
 
                 <div>
