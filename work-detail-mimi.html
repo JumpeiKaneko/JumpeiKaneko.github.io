@@ -26,7 +26,9 @@
     <div id="mobile-menu" class="mobile-menu-panel"></div>
 
     <main class="main-content">
-        <section class="fade-in-section work-detail-wrapper px-6 md:px-0"> <div class="work-detail-header">
+        <section class="fade-in-section work-detail-wrapper">
+            
+            <div class="work-detail-header">
                 <h1 class="work-detail-title">耳を澄ます為の装置</h1>
                 <div class="work-detail-meta">
                     <p>2026 / Installation</p>
@@ -35,42 +37,59 @@
                 </div>
             </div>
 
-            <img src="images/mimi-main.jpg" alt="耳を澄ます為の装置" class="work-detail-image-main rounded-lg shadow-lg"> <div class="work-detail-text space-y-8 mt-12"> <div>
+            <img src="images/mimi-main.jpg" alt="耳を澄ます為の装置" class="work-detail-image-main">
+
+            <div class="work-detail-text space-y-8">
+                <div>
                     <h3 class="font-bold text-lg mb-3">■ 作品要旨</h3>
                     <p>あなたが見ている「私」は私ではない。「私」は、「あなたの中の私」なのだ。本作は、同じ事象を見つめながらも、個々人が異なる側面を切り取り物語化する「視線の非対称性」をテーマに制作した。「その人の中のそれ」があふれるこの世界で、これから先、あなたと私、そして世界は、どうやって歩むのだろうか。</p>
                     <p class="mt-4">奥に配置されたアルミパネルの「割り切れない」物理的な凸凹をデータ化し、音楽へと変換された「断片」として出力する。「モノ」としてのキャンバスと、「データ」としての音が重なり合うことで、鑑賞者は全体像の見えない複雑さに直面する。本作は、自身の主観的な物語と客観的な構造の間で「折り合い」をつけるための装置である。</p>
                 </div>
 
+                <div class="bg-gray-50 p-6 md:p-8 rounded-lg border border-gray-100">
+                    <h3 class="font-bold text-lg mb-3 border-b pb-2">■ コア・コンセプト</h3>
+                    <h4 class="font-bold text-md mb-2 text-gray-900">③ 視線の非対称性</h4>
+                    <p class="text-sm leading-relaxed text-gray-700">同じ事象を見つめていても、各人が異なる側面を切り取り「単純化」することで生じる物語の分裂と、そこから生まれる二項対立的な「すれ違い」の構造を分析する。誰も事の全体を見通せない以上、主観性の強い「音」を媒介に他者のまなざしを追体験させるプロセスを通じ、物語化された認知の非対称性を超えた新たな関係性の創出を目指す。</p>
+                </div>
+
                 <div>
                     <h3 class="font-bold text-lg mb-3">■ 音の生成ルール</h3>
                     <p class="mb-2">アルミパネルの形状データを読み取り、以下の仕組みで音に変換している。</p>
-                    <ul class="space-y-3 pl-4 list-none"> <li><strong>① 起伏の深さ ＝ 和音の厚み</strong><br>アルミの凸凹のデータが連続して偏ると、空間を漂う和音の層が最大10層まで増減し、響きが変化する。</li>
+                    <ul class="space-y-3 pl-4">
+                        <li><strong>① 起伏の深さ ＝ 和音の厚み</strong><br>アルミの凸凹のデータが連続して偏ると、空間を漂う和音の層が最大10層まで増減し、響きが変化する。</li>
                         <li><strong>② しわの密度 ＝ ビートの速さ</strong><br>アルミのしわの細かさのデータが連続して偏ると、心臓の鼓動のようなビートを打つ速さが3段階に変化。</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="font-bold text-lg mb-3">■ 技術スタック (Technical Stack)</h3>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700"> <li>Software：Python（アルミの深度や密度をMIDI音源に変換）</li>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Software：Python（アルミの深度や密度をMIDI音源に変換）</li>
                         <li>Hardware：論考、アルミパネル、黒色キャンバス、木枠、振動スピーカー（エキサイター）</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="video-container mt-16 rounded-lg overflow-hidden shadow-xl"> <iframe src="https://www.youtube.com/embed/koExwe1mF_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-container mt-12">
+                <iframe src="https://www.youtube.com/embed/koExwe1mF_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-            <div class="work-detail-images-sub mt-16 flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-0">
-                <img src="images/mimi-sub1.jpg" alt="展示風景1" class="w-full md:w-1/2 aspect-[3/2] object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
-                <img src="images/mimi-sub2.jpg" alt="展示風景2" class="w-full md:w-1/2 aspect-[3/2] object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+            <div class="mt-12 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full md:w-1/2">
+                    <img src="images/mimi-sub1.jpg" alt="展示風景1" class="w-full h-auto">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="images/mimi-sub2.jpg" alt="展示風景2" class="w-full h-auto">
+                </div>
             </div>
 
-            <div class="text-center mt-20 mb-12"> <a href="work.html" class="back-link inline-block bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition-colors">← Back to Work</a>
+            <div class="text-center mt-12">
+                <a href="work.html" class="back-link">← Back to Work</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer bg-gray-100 py-8 mt-12"><p class="text-center text-gray-600">&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
     <script src="script.js" defer></script>
 </body>
 </html>
