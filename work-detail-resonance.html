@@ -10,14 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* スライドショー用のCSS（トリミングなし） */
         .slider-wrap { position: relative; width: 100%; overflow: hidden; }
         .slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
         .slider-track::-webkit-scrollbar { display: none; }
-        .slider-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; background-color: #f9f9f9; }
+        .slider-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; flex-shrink: 0; scroll-snap-align: start; }
         .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
-        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #d1d5db; cursor: pointer; transition: background-color 0.3s; }
-        .dot.active { background-color: #374151; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #4b5563; cursor: pointer; transition: background-color 0.3s; }
+        .dot.active { background-color: #e5e7eb; }
     </style>
 </head>
 <body>
@@ -41,8 +40,9 @@
             <div class="work-detail-header">
                 <h1 class="work-detail-title">Resonance</h1>
                 <div class="work-detail-meta">
-                    <p>2025 / 形式：サウンド・インスタレーション ｜ WebAR体験型作品</p>
-                    <p>鯖江市制70周年記念 まちなか芸術祭2025｜出展<br>させぼピース展 ―海からたどる、時の旅｜出展</p>
+                    <p>2025.9 / サウンド・インスタレーション ｜ WebAR体験型作品</p>
+                    <p>鯖江市制70周年記念 まちなか芸術祭2025｜出展</p>
+                    <p>させぼピース展 ―海からたどる、時の旅｜出展</p>
                     <p>Sasebo Sound Chronicle Award｜ファイナリスト選出・受賞</p>
                     <p class="mt-2">
                         <a href="https://x.gd/IlZ4M" target="_blank" class="underline hover:text-gray-500 mr-4">作品本編音源</a>
@@ -80,4 +80,48 @@
                 </div>
             </div>
 
-            <div class="video
+            <div class="video-container mt-12">
+                <iframe src="https://www.youtube.com/embed/Ptc896ATLQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="slider-wrap mt-12">
+                <div class="slider-track">
+                    <img src="images/resonance-sub1.jpg" alt="展示風景1" class="slider-img">
+                    <img src="images/resonance-sub2.jpg" alt="展示風景2" class="slider-img">
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="work.html" class="back-link">← Back to Work</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; <span id="year"></span> JUMPEI KANEKO</p></footer>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.slider-track');
+            if (!track) return;
+            const dots = document.querySelectorAll('.dot');
+            track.addEventListener('scroll', () => {
+                const scrollLeft = track.scrollLeft;
+                const itemWidth = track.clientWidth;
+                const activeIndex = Math.round(scrollLeft / itemWidth);
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            });
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
