@@ -21,7 +21,8 @@
         .slider-track {
             display: flex;
             width: max-content;
-            animation: infinite-scroll 25s linear infinite;
+            /* 15秒かけて1周（5秒 × 3枚）する設定 */
+            animation: step-scroll 15s infinite;
         }
         .slider-img {
             width: 400px;
@@ -30,9 +31,13 @@
             margin-right: 20px;
             flex-shrink: 0;
         }
-        @keyframes infinite-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-400px * 3 - 20px * 3)); }
+        
+        /* メリハリをつけて動かす設定（止まる→動く→止まる） */
+        @keyframes step-scroll {
+            0%, 30% { transform: translateX(0); } /* 1枚目で待機 */
+            33.3%, 63.3% { transform: translateX(-420px); } /* 2枚目で待機 (画像400px + 余白20px) */
+            66.6%, 96.6% { transform: translateX(-840px); } /* 3枚目で待機 */
+            100% { transform: translateX(-1260px); } /* スライドして一瞬で最初に戻るループ */
         }
     </style>
 </head>
@@ -42,7 +47,10 @@
             <a href="index.html" class="site-title">JUMPEI KANEKO</a>
             <nav class="main-nav">
                 <a href="index.html" class="nav-link active">ABOUT</a>
+                <a href="vision.html" class="nav-link">VISION</a>
                 <a href="work.html" class="nav-link">WORK</a>
+                <a href="news.html" class="nav-link">NEWS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
         </div>
     </header>
