@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jumpei Kaneko</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Jumpei Kaneko</title>
+<meta name="description" content="金子淳平へのご依頼・ご相談はこちらから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
-<body>
-    <header id="header" class="site-header">
-        <div class="container mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
-            <a href="index.html" class="site-title">JUMPEI KANEKO</a>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link">ABOUT</a>
-                <a href="work.html" class="nav-link">WORK</a>
-                <a href="news.html" class="nav-link">NEWS</a>
-                <a href="contact.html" class="nav-link active">CONTACT</a>
-            </nav>
-            <button id="menu-btn" class="mobile-menu-button">MENU</button>
-        </div>
-    </header>
-    <div id="mobile-menu" class="mobile-menu-panel"></div>
+<body data-page="contact">
 
-    <main class="main-content">
-        <section class="fade-in-section text-center">
-            <h1 class="page-title">CONTACT</h1>
-            <p class="text-sm text-gray-400 mb-6">ご依頼、ご相談など、お気軽にご連絡ください。</p>
-            <a href="mailto:junkaneko8@gmail.com" class="text-lg md:text-xl hover:text-white transition-colors">
-                junkaneko8@gmail.com
-            </a>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>&copy; <span id="year"></span> JUMPEI KANEKO</p>
-    </footer>
-    <script src="script.js" defer></script>
+<header class="site-header">
+  <div class="wrap site-header__row">
+    <a href="index.html" class="brand">
+      JUMPEI KANEKO
+      <span class="brand-jp">金子淳平</span>
+    </a>
+    <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="nav">
+      <span class="menu-toggle__bars"><span></span><span></span><span></span></span>
+      MENU
+    </button>
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link" data-nav-key="about">About</a></li>
+        <li><a href="work.html" class="nav__link" data-nav-key="work">Work</a></li>
+        <li><a href="news.html" class="nav__link" data-nav-key="news">News</a></li>
+        <li><a href="contact.html" class="nav__link" data-nav-key="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="contact-block wrap">
+    <p class="hero__eyebrow">Get in touch</p>
+    <h1 class="hero__title" style="font-size: var(--fs-xl); margin-bottom: var(--space-4);" data-scramble>Contact</h1>
+    <p class="contact-block__lead">
+      ご依頼、ご相談など、お気軽にご連絡ください。
+    </p>
+    <a href="mailto:junkaneko8@gmail.com" class="contact-block__mail">junkaneko8@gmail.com</a>
+
+    <div class="project-links" style="margin-top: var(--space-5);">
+      <a href="https://www.instagram.com/jumpei.kaneko" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://soundcloud.com/lt1jsa0m3wbn" target="_blank" rel="noopener">SoundCloud</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__row">
+    <span>© 2026 JUMPEI KANEKO</span>
+    <div class="site-footer__socials">
+      <a href="https://www.instagram.com/jumpei.kaneko" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://soundcloud.com/lt1jsa0m3wbn" target="_blank" rel="noopener">SoundCloud</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
